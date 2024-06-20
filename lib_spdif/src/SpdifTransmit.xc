@@ -1,4 +1,4 @@
-// Copyright 2011-2023 XMOS LIMITED.
+// Copyright 2011-2024 XMOS LIMITED.
 // This Software is subject to the terms of the XMOS Public Licence: Version 1.
 
 /**
@@ -30,7 +30,7 @@ void spdif_tx_port_config(out buffered port:32 p, clock clk, in port p_mclk, uns
     /* Set delay to align SPDIF output to the clock at the external flop */
     set_clock_fall_delay(clk, delay);
 
-    /* Note, we so not start the clock to allow sharing of the clock-block */
+    /* Note, we do not start the clock to allow sharing of the clock-block */
     //start_clock(clk);
 }
 
