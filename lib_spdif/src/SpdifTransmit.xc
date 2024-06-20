@@ -173,7 +173,7 @@ static inline void subframe_tx(out buffered port:32 p, unsigned sample_in, int c
     output_word(p, encoded_word, divide);
 }
 
-void SpdifTransmit(out buffered port:32 p, chanend c_tx0, const int ctrl_left[2], const int ctrl_right[2], int divide)
+static inline void SpdifTransmit(out buffered port:32 p, chanend c_tx0, const int ctrl_left[2], const int ctrl_right[2], int divide)
 {
     unsigned sample_l, sample_r;
 
@@ -233,7 +233,7 @@ void SpdifTransmit(out buffered port:32 p, chanend c_tx0, const int ctrl_left[2]
     }
 }
 
-void SpdifTransmitError(chanend c_in)
+static inline void SpdifTransmitError(chanend c_in)
 {
     while(1)
     {
